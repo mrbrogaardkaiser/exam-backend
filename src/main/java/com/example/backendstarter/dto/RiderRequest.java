@@ -9,7 +9,6 @@ import java.time.LocalDate;
 @Getter
 @Setter
 public class RiderRequest {
-    private int id;
     private String name;
     private String nation;
     private LocalDate dateOfBirth;

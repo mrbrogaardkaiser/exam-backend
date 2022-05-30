@@ -29,7 +29,7 @@ public class TestData implements ApplicationRunner {
         Team t1 = new Team("Alpecin-Deceuninck");
         Team t2 = new Team("Lotto Soudal");
         Team t3 = new Team("Astana Qazaqstan Team");
-        Team t4 = new Team("Team DSM");
+
 
         Rider r1 = new Rider("Gianni Vermeersch","Belgium", LocalDate.of(1992,11,19), 11300L,3,3,t1);
         Rider r2 = new Rider("Xandro Meurisse","Belgium", LocalDate.of(1992,1,31), 11600L,2,2,t1);
@@ -41,9 +41,14 @@ public class TestData implements ApplicationRunner {
         Rider r7 = new Rider("Philippe Gilbert","Holland", LocalDate.of(1982,7,5), 16400L,4,2,t2);
         Rider r8 = new Rider("Caleb Ewan","Australia", LocalDate.of(1994,6,11), 16000L,0,0,t2);
 
+        Rider rr = new Rider("Samuele Battistella","Italy", LocalDate.of(1998,11,14), 12000L,1,1,t3);
+        Rider rd = new Rider("Alexey Lutsenko","Kazakhstan", LocalDate.of(1992,9,7), 13000L,0,0,t3);
+        Rider re = new Rider("Miguel Ángel López","Colombia", LocalDate.of(1994,2,4), 14000L,0,0,t3);
+        Rider rs = new Rider("Gianni Moscon","Italy", LocalDate.of(1994,4,20), 15000L,2,1,t3);
 
         teamRepository.save(t1);
         teamRepository.save(t2);
+        teamRepository.save(t3);
 
 
 
