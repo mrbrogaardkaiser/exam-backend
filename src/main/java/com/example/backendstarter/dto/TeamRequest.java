@@ -1,4 +1,4 @@
 package com.example.backendstarter.dto;
 
-public class Dto {
+public class TeamRequest {
 }
