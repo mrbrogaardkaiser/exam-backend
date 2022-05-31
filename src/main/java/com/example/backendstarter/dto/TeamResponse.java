@@ -20,13 +20,11 @@ public class TeamResponse {
     private int id;
     private String name;
     private long totalTeamTime;
-    private Set<Rider> riders = new HashSet<>();
 
 
     public TeamResponse(Team team){
         this.id= team.getId();
         this.name= team.getName();
         this.totalTeamTime=team.getTotalTeamTime();
-        this.riders=team.getRiders();
     }
 }
