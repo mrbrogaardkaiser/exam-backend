@@ -2,7 +2,13 @@ package com.example.backendstarter.api;
 
 import com.example.backendstarter.dto.RiderRequest;
 import com.example.backendstarter.dto.RiderResponse;
+import com.example.backendstarter.dto.TeamResponse;
+import com.example.backendstarter.entity.Rider;
+import com.example.backendstarter.entity.Team;
+import com.example.backendstarter.repositories.RiderRepository;
+import com.example.backendstarter.repositories.TeamRepository;
 import com.example.backendstarter.service.RiderService;
+import com.example.backendstarter.service.TeamService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,9 +19,11 @@ import java.util.List;
 public class RiderController {
 
     RiderService riderService;
+    TeamService teamService;
 
-    public RiderController(RiderService riderService) {
+    public RiderController(RiderService riderService, TeamService teamService) {
         this.riderService = riderService;
+        this.teamService = teamService;
     }
 
     @GetMapping
@@ -42,5 +50,6 @@ public class RiderController {
     public void deleteRider(@PathVariable int id){
         riderService.deleteRider(id);
     }
+
 
 }

@@ -21,4 +21,8 @@ public class TeamService {
         List<Team> teams = teamRepository.findAll();
         return teams.stream().map(team->new TeamResponse(team)).collect(Collectors.toList());
     }
+
+    public TeamResponse getTeam(int id){
+        return new TeamResponse(teamRepository.getById(id));
+    }
 }

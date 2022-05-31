@@ -3,10 +3,7 @@ package com.example.backendstarter.api;
 
 import com.example.backendstarter.dto.TeamResponse;
 import com.example.backendstarter.service.TeamService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,5 +21,10 @@ public class TeamController {
     @GetMapping
     public List<TeamResponse> getTeams(){
         return teamService.getTeams();
+    }
+
+    @GetMapping("/{id}")
+    TeamResponse getTeam(@PathVariable int id){
+        return teamService.getTeam(id);
     }
 }
